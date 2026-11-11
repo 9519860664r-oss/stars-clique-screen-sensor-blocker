@@ -64,6 +64,7 @@ Register-ScheduledTask -TaskName $task -Action $action -Trigger $trigger -Princi
 Start-ScheduledTask -TaskName $task
 
 Write-Host (T "$name установлен и запущен." "$name is installed and running.") -ForegroundColor Green
-Write-Host (T "Num * (на ноутбуках часто Fn + *) — выключить / включить сенсор. Правый клик по значку в трее — настройки."
-              "Num * (often Fn + * on laptops) turns the touch screen off / on. Right-click the tray icon for settings.")
+$hint = T "Num * (на ноутбуках часто Fn + *) — выключить / включить сенсор. Правый клик по значку в трее — настройки." `
+          "Num * (often Fn + * on laptops) turns the touch screen off / on. Right-click the tray icon for settings."
+Write-Host $hint
 Start-Sleep 4
